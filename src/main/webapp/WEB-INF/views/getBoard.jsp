@@ -88,26 +88,28 @@
 			<input name="seq" type="hidden" value="${board.seq}" />
 			<table border="0" cellpadding="5" cellspacing="0" class="boardTbl">
 				<tr>
-					<td bgcolor="orange" width="100"  class="td1">제목</td>
-					<td align="left"><input name="title" type="text"
-						value="${board.title}" /></td>
+					<td bgcolor="orange"class="td1">번호</td><!-- 시퀀스 값 가져오기 -->
+					<td align="left"><input type="hidden" name='title' />${board.q_id}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange"  class="td1">작성자</td>
-					<td align="left">${board.writer}</td>
+					<td bgcolor="orange" class="td1">조회수</td><!-- 클릭한 횟수 +1로 가져오기(UPDATE) -->
+					<td align="left"><input type="hidden" name='writer'/>${board.view_count}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange"  class="td1">내용</td>
-					<td align="left"><textarea name="content" cols="40" rows="10">
-						${board.content}</textarea></td>
+					<td bgcolor="orange" class="td1">작성자</td><!-- 작성자 아이디값 가져오기 -->
+					<td align="left"><input type="hidden" name='writer'/>${board.member_id}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange"  class="td1">등록일</td>
-					<td align="left">${board.regDate}</td>
+					<td bgcolor="orange" class="td1">등록일</td> <!-- SYSDATE 가져오기 -->
+					<td align="left"><input type="hidden" name='writer'/>${sysdate}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange"  class="td1">조회수</td>
-					<td align="left">${board.cnt}</td>
+					<td bgcolor="orange" width="100" class="td1">제목</td>
+					<td align="left"><input type="text" name='title' />${board.q_title}</td>
+				</tr>
+				<tr>
+					<td bgcolor="orange" class="td1">내용</td>
+					<td align="left"><textarea cols="40" rows="10"  name='content'>${board.q_content}</textarea></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">

@@ -102,7 +102,7 @@
 										<td>215</td>
 										<td>hansol</td>
 										<td>22/11/24</td>
-										<td><a href="insertBoard.do?b_id=${board.q_id}">
+										<td><a href="getBoard.do?b_id=${board.q_id}">
 												집에 보내주세요</a></td>
 										<td>오늘은 집에 몇 시쯤 갈 수 있을까요? 우리는 잘 하고 있는 게 맞을까요? 집에 보내줘 당장</td>
 					<%-- 					<td>${board.q_id}</td> --%>
