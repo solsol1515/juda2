@@ -96,28 +96,21 @@
 									<th width="300">내용</th>
 										<!-- 추가 -->
 								</tr>
-				<%-- 			<c:forEach items="${boardList }" var="board"> --%>
+							<c:forEach items="${boardList }" var="board">
 									<tr>
-										<td>001</td>
-										<td>215</td>
-										<td>hansol</td>
-										<td>22/11/24</td>
-										<td><a href="getBoard.do?b_id=${board.q_id}">
-												집에 보내주세요</a></td>
-										<td>오늘은 집에 몇 시쯤 갈 수 있을까요? 우리는 잘 하고 있는 게 맞을까요? 집에 보내줘 당장</td>
-					<%-- 					<td>${board.q_id}</td> --%>
-					<%-- 					<td>${board.member_id}</td> --%>
-					<%-- 					<td>${board.q_date }</td> --%>
-					<%-- 					<td align="left"><a href="getBoard.do?q_id=${board.q_id }"> --%>
-					<%-- 							${board.q_title}</a></td> --%>
-					<%-- 					<td>${board.q_content}</td> --%>
-					<%-- 					<td>${board.view_count}</td> --%>
-					<%-- 					<td>${board.q_category}</td> --%>
+										<td>${board.q_id}</td>
+										<td>${board.member_id}</td>
+										<td>${board.q_date }</td>
+										<td align="left"><a href="getBoard.do?q_id=${board.q_id }">
+												${board.q_title}</a></td>
+										<td>${board.q_content}</td>
+										<td>${board.view_count}</td>
+										<td>${board.q_category}</td>
 										<!-- 추가 -->
 										<td>
 										</td>					
 									</tr>
-				<%-- 			</c:forEach> --%>
+							</c:forEach>
 		</table><br/><br/>
 		<a href="insertBoard.do"><b>새 글 등록</b></a>
 						
